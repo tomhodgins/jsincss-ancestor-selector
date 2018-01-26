@@ -1,0 +1,26 @@
+{
+  "name": "jsincss-ancestor-selector",
+  "version": "0.0.1",
+  "description": "An ancestor selector for jsincss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhodgins/jsincss-ancestor-selector.git"
+  },
+  "keywords": [
+    "jsincss",
+    "ancestor",
+    "selector",
+    "parent",
+    "css"
+  ],
+  "author": "Tommy Hodgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhodgins/jsincss-ancestor-selector/issues"
+  },
+  "homepage": "https://github.com/tomhodgins/jsincss-ancestor-selector#readme"
+}
