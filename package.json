@@ -1,6 +1,6 @@
 {
   "name": "jsincss-ancestor-selector",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An ancestor selector plugin for jsincss",
   "main": "index.js",
   "scripts": {
