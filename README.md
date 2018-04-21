@@ -24,19 +24,19 @@ Another option that works for building or testing, that isn't ideal for producti
 
 ## Importing
 
-You can import the plugin into your own JavaScript modules in a couple of ways.
+This plugin exists in three different formats:
 
-The first way is using the native [`import` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) in JavaScript. Here you can assign any name you want to the function you are importing, and you only need to provide a path to the plugin's `index.js` file:
+- CommonJS module: [index.js](index.js)
+- Vanilla JS module: [index.vanilla.js](index.vanilla.js)
+- Browser function: [index.browser.js](index.browser.js)
 
-```js
-import ancestor from './node_modules/jsincss-ancestor-selector/index.vanilla.js'
-```
-
-You can also use `require` to load this plugin instead with a bundler like Webpack or Parcel:
+You can import this plugin using the native [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statement in JavaScript. Here you can assign any name you want to the function you are importing, and you only need to provide a path to the plugin's `index.vanilla.js` file:
 
 ```js
-const ancestor = require('jsincss-ancestor-selector')
+import ancestor from './index.vanilla.js'
 ```
+
+You can also use the CommonJS-formatted module located at [index.js](index.js) with `require()` for use with bundlers that don't use vanilla JS modules.
 
 Once you have imported this plugin into your module, you can use the plugin as `ancestor()`
 
