@@ -8,7 +8,7 @@ This plugin is a JavaScript module that works with [JS-in-CSS stylesheets](https
 
 ## Downloading
 
-You can download `index.js` and add it to your codebase, or download it with npm:
+You can download jsincss-ancestor-selector and add it to your codebase manually, or download it with npm:
 
 ```bash
 npm install jsincss-ancestor-selector
@@ -18,7 +18,7 @@ Another option that works for building or testing, that isn't ideal for producti
 
 ```html
 <script type=module>
-  import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.js'
+  import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.vanilla.js'
 </script>
 ```
 
@@ -29,13 +29,13 @@ You can import the plugin into your own JavaScript modules in a couple of ways.
 The first way is using the native [`import` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) in JavaScript. Here you can assign any name you want to the function you are importing, and you only need to provide a path to the plugin's `index.js` file:
 
 ```js
-import ancestor from './node_modules/jsincss-ancestor-selector/index.js'
+import ancestor from './node_modules/jsincss-ancestor-selector/index.vanilla.js'
 ```
 
-If you want to use `require` to load this plugin instead, and use a bundler like Webpack or Parcel, make sure to add `.default` as you require it:
+You can also use `require` to load this plugin instead with a bundler like Webpack or Parcel:
 
 ```js
-const ancestor = require('jsincss-ancestor-selector').default
+const ancestor = require('jsincss-ancestor-selector')
 ```
 
 Once you have imported this plugin into your module, you can use the plugin as `ancestor()`
@@ -60,8 +60,8 @@ This example will use the `jsincss` plugin to load a JS-in-CSS stylesheet making
 
 ```html
 <script type=module>
-  import jsincss from 'https://unpkg.com/jsincss/index.js'
-  import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.js'
+  import jsincss from 'https://unpkg.com/jsincss/index.vanilla.js'
+  import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.vanilla.js'
 
   jsincss(() => `
 
@@ -76,7 +76,7 @@ This example will use the `jsincss` plugin to load a JS-in-CSS stylesheet making
 It's also possible to write your stylesheets as a separate JavaScript module like this, where you import any helper plugins at the top of the stylesheet:
 
 ```js
-import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.js'
+import ancestor from 'https://unpkg.com/jsincss-ancestor-selector/index.vanilla.js'
 
 export default () => `
 
@@ -90,7 +90,7 @@ export default () => `
 And then import both the `jsincss` plugin and the stylesheet into your code and run them like this, suppling any `selector` or `events` list the `jsincss` plugin might need to apply the stylesheet only the the element(s) and event(s) you require, depending on what you're doing:
 
 ```js
-import jsincss from 'https://unpkg.com/jsincss/index.js'
+import jsincss from 'https://unpkg.com/jsincss/index.vanilla.js'
 import stylesheet from './path/to/stylesheet.js'
 
 jsincss(stylesheet)
