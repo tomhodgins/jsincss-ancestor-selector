@@ -10,8 +10,6 @@ function ancestor(selector, ancestor, rule) {
 
       tag.setAttribute(`data-ancestor-${attr}`, count)
       styles += `${ancestor}[data-ancestor-${attr}="${count}"] { ${rule} }\n`
-      count++
-
       return styles
 
     }, '')
